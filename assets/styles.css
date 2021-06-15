@@ -1,0 +1,284 @@
+/* import font dari google, 
+silahkan cari di google font untuk mempelajari lebih lanjut
+ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-color: #FFFFFF;
+    color: #161C2D;
+    display: flex;
+    flex-direction: column;
+}
+
+.rainbow {
+    background: -webkit-linear-gradient(92deg, #95d7e3, #eb76ff);
+    background-size: 600vw 600vw;
+    animation: textAnimate 5s linear infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* css animasi, kita akan membahas dilain waktu */
+@keyframes textAnimate {
+    0% {
+        -webkit-filter: hue-rotate(0deg);
+        filter: hue-rotate(0deg);
+        background-position-x: 0
+    }
+
+    to {
+        -webkit-filter: hue-rotate(1turn);
+        filter: hue-rotate(1turn);
+        background-position-x: 600vw
+    }
+}
+
+.nav-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-items-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-title {
+    color: #6B2DCF;
+}
+
+.nav-item {
+    list-style: none;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-bottom: 1px solid #ffffff;
+
+}
+
+.nav-item:hover {
+    border-bottom: 1px solid #FEB85D;
+    transition: border-bottom 0.4s;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.main-container {
+    width: 70%;
+    margin: auto;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero-title {
+    font-weight: 700;
+    font-size: 4vw;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.hero-title-sub {
+    font-size: 1.5vw;
+}
+
+.hero-subtitle {
+    font-size: 1.3vw;
+}
+
+.hero-image {
+    max-width: 540px;
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content-title {
+    text-align: center;
+    color: #574772;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+form {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.input-container {
+    margin: 10px 0px 20px 0px;
+    width: 100%;
+}
+
+.input-container input {
+    display: block;
+    width: 95%;
+    margin: auto;
+    border: 2px solid #f3f3f3;
+    border-radius: 5px;
+    padding: 5px;
+    height: 1.6rem;
+    font-family: 'Poppins';
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: box-shadow 0.4s;
+}
+
+.input-container input:focus {
+    outline: none;
+    box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.33);
+    transition: box-shadow 0.4s;
+}
+
+textarea[name='message'] {
+    display: block;
+    width: 95%;
+    margin: auto;
+    border: none;
+    border: 2px solid #f3f3f3;
+    font-size: 15px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    padding: 5px;
+    box-shadow: none;
+    background-color: #f3f3f3;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: box-shadow 0.4s;
+}
+
+textarea[name='message']:focus {
+    outline: none;
+    box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.33);
+    transition: box-shadow 0.4s;
+}
+
+.form-submit {
+    width: 80%;
+    margin: auto;
+    display: block;
+    padding: 6px 0;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.33);
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #673ab7;
+}
+
+.form-submit:hover {
+    background-color: #8957e3;
+    transition: background-color 0.3s;
+}
+
+.form-submit:active {
+    background-color: #381a6c;
+}
+
+code {
+    border: 1px solid #ff779b;
+    border-radius: 4px;
+    padding: 1px 3px;
+    color: #f44336;
+    background-color: #db003a14;
+    font-family: "Consolas";
+}
+
+footer {
+    background-color: #FFF5FF;
+    text-align: center;
+    padding: 10px 0;
+    /*position: fixed;*/
+    width: 100%;
+    /*    left: 0;
+    bottom: 0;*/
+}
+
+.footer-title {
+    font-weight: 300;
+    font-size: 13px;
+}
+
+/* ketika ukuran layar mengecil hingga lebih dari 600px kebawah, maka kode dibawah ini akan dieksekusi */
+@media all and (max-width: 600px) {
+    .nav-container {
+        display: block;
+    }
+
+    .navbar-title {
+        text-align: center;
+    }
+
+    .nav-items-container {
+        display: none;
+    }
+
+    .nav-items-container-mobile {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-weight: 700;
+        font-size: 36px;
+        margin-bottom: 5px;
+        line-height: 1.2;
+
+    }
+
+    .hero-title-sub {
+        font-size: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 17px;
+    }
+
+    form {
+        max-width: none;
+        width: 100%;
+    }
+
+    footer {
+        background-color: #FFF5FF;
+        text-align: center;
+        padding: 10px 0;
+        /*position: fixed;*/
+        width: 100%;
+    }
+}
+
+/* ketika ukuran layar membesar hingga lebih dari 600px keatas, maka kode dibawah ini akan dieksekusi */
+@media all and (min-width: 600px) {
+    .nav-items-container-mobile {
+        display: none;
+    }
+
+}
